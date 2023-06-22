@@ -1,0 +1,47 @@
+{
+  "name": "reactauthenticationapp",
+  "version": "1.0.0",
+  "description": "AuthenticationApp",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server .",
+    "build": "Webpack .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geet0597/ReactAuthenticationApp.git"
+  },
+  "keywords": [
+    "Authentication"
+  ],
+  "author": "Gitika Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Geet0597/ReactAuthenticationApp/issues"
+  },
+  "homepage": "https://github.com/Geet0597/ReactAuthenticationApp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/runtime": "^7.22.5",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jest": "^27.2.2",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.13.0"
+  }
+}

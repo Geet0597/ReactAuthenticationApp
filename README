@@ -1,0 +1,40 @@
+# React App with Authentication, Home Page, and Lazy Loading
+
+This is a React application that demonstrates various features, including authentication, a home page, and lazy loading with an API. The app allows users to sign up, sign in, reset their passwords, and access a restricted home page once authenticated. It also implements lazy loading to efficiently fetch and display a large dataset from an API.
+
+## Features
+
+- Authentication Page: Users can sign up, sign in, and reset their passwords using a refresh token.
+- Home Page: Accessible only to authenticated users, displaying relevant content.
+- Lazy Loading with API: Fetches a large dataset from an API and implements lazy loading to load additional data as the user scrolls or interacts with the page.
+
+## Technologies and Libraries Used
+
+- React: JavaScript library for building user interfaces.
+- React Router: Library for handling routing within a React application.
+- [Library/Framework of Your Choice]: Used for implementing the authentication functionality (e.g., Firebase, Superbase).
+- [UI Library of Your Choice]: Optional library for styling the components (e.g., Mantine, MUI).
+
+## Project Structure
+
+- `index.html`: HTML file that serves as the entry point for the React app.
+- `src/`
+  - `App.js`: React component for setting up routing and rendering the appropriate components based on the URL.
+  - `Authentication.js`: React component that implements the authentication page.
+  - `Home.js`: React component for the home page.
+  - `LazyLoading.js`: React component that implements lazy loading functionality with the provided API.
+  - Other necessary files and directories (e.g., styles, additional components).
+
+## Setup Instructions
+
+1. Clone the repository to your local machine using `git clone [repository-url]`.
+2. Navigate to the project directory: `cd react-app`.
+3. Install the dependencies by running `npm install`.
+4. Start the development server with `npm start`.
+5. Access the application in your browser at `http://localhost:3000`.
+
+## Links
+
+- GitHub Repository: https://github.com/Geet0597/ReactAuthenticationApp.git
+- Hosted Application: [link-to-your-hosted-application]
+
