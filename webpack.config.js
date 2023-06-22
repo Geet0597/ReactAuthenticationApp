@@ -21,7 +21,8 @@ module.exports={
         /** "filename"
          * the name of the output file 
          */
-        filename: "main.js"
+        filename: "main.js",
+        publicPath: '/'
     },
     /** "target"
      * setting "node" as target app (server side), and setting it as "web" is 
@@ -50,7 +51,9 @@ module.exports={
         /** "liveReload"
          * disable live reload on the browser. "hot" must be set to false for this to work
         */
-        liveReload: true
+        liveReload: true,
+
+        historyApiFallback: true,
     },
     resolve: {
         /** "extensions" 
@@ -72,7 +75,11 @@ module.exports={
                 test: /\.(js|jsx)$/,    //kind of file extension this rule should look for and apply in test
                 exclude: /node_modules/, //folder to be excluded
                 use:  'babel-loader' //loader which we are going to use
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     }
 }
