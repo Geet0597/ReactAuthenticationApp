@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../../firebase';
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom';
  
 const Authentication = (props) => {
     const {setIsAuthenticated} = props;
@@ -14,10 +14,9 @@ const Authentication = (props) => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in
-            const user = userCredential.user;
+            const user = userCredential.user; // to get user details if reuired
             setIsAuthenticated(true);
             navigate("/home");
-            console.log(user);
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -71,7 +70,9 @@ const Authentication = (props) => {
                                 </button>
                             </div>                               
                         </form>
-                       
+                        <p>
+                            <Link to="/reset-password">Forgot your password?</Link>
+                        </p>
                         <p className="text-sm text-white text-center">
                             No account yet?
                             <NavLink to="/signup">

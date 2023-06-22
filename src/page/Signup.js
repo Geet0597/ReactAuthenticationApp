@@ -15,8 +15,7 @@ const Signup = () => {
       await createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in
-            const user = userCredential.user;
-            console.log(user);
+            const user = userCredential.user; // to get user details if reuired
             alert(`Hii, Please SignIn`);
             navigate("/signin");
         })

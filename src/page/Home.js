@@ -17,7 +17,6 @@ const Home = (props) => {
         // Sign-out successful.
             setIsAuthenticated(false);
             navigate("/signin");
-            console.log("Signed out successfully")
         }).catch((error) => {
         // An error happened.
         alert('An Error Happened');
