@@ -66,7 +66,8 @@ const Signup = () => {
                         
                         <button
                             type="submit" 
-                            onClick={onSubmit}                        
+                            onClick={onSubmit}   
+                            disabled={email === '' || password === ''}                     
                         >  
                             Sign up                                
                         </button>

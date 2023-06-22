@@ -64,7 +64,8 @@ const Authentication = (props) => {
                                                 
                             <div>
                                 <button                                    
-                                    onClick={onLogin}                                        
+                                    onClick={onLogin}  
+                                    disabled={email === '' || password === ''}                                      
                                 >      
                                     Login                                                                  
                                 </button>
