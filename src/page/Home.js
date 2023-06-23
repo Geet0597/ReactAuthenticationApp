@@ -60,7 +60,7 @@ const Home = (props) => {
     return(
         <>
           <nav className='nav'>
-              <p>
+              <p className='headerText'>
                 Welcome Home
               </p>
               <div>
@@ -69,21 +69,21 @@ const Home = (props) => {
             </button>
           </div>
           </nav>
-          <div>
+          <div className='dataContainer'>
               {data.map((item) => (
-                  <div key={item._id}>
-                      Name: {item.name}
-                      No. of Trips: {item.trips}
-                      Airline Details
+                  <div key={item._id} className='card'>
+                      <div>Name: {item.name}</div>
+                      <div>No. of Trips: {item.trips}</div>
+                      <div>Airline Details</div>
                       {item.airline.map((airline) => (
                         <div key={airline._id}>
-                          Name: {airline.name}
-                          Website: {airline.website}
-                          Logo: <img src={airline.logo} alt='logo'/>
-                          Slogan: {airline.slogan}
-                          Head Quaters: {airline.head_quaters}
-                          country: {airline.country}
-                          established: {airline.established}
+                          <div>Name: {airline.name}</div>
+                          <div>Website: {airline.website}</div>
+                          <div>Logo: <img src={airline.logo} alt='logo'/></div>
+                          <div>Slogan: {airline.slogan}</div>
+                          <div>Head Quaters: {airline.head_quaters}</div>
+                          <div>Country: {airline.country}</div>
+                          <div>Established: {airline.established}</div>
                       </div>
                       ))}
                   </div>

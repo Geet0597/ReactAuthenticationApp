@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import './Authentication.css';
  
 const Authentication = (props) => {
     const {setIsAuthenticated} = props;
@@ -29,12 +30,12 @@ const Authentication = (props) => {
  
     return(
         <>
-            <main >        
+            <main>        
                 <section>
-                    <div>                                            
-                        <p> Authentication </p>                                            
-                        <form>                                              
-                            <div>
+                    <div className='sigininContainer'>                                            
+                        <p className='headerText'> Authentication </p>                                            
+                        <form className='formContainer'>                                              
+                            <div className='field'>
                                 <label htmlFor="email-address">
                                     Email address
                                 </label>
@@ -48,7 +49,7 @@ const Authentication = (props) => {
                                 />
                             </div>
 
-                            <div>
+                            <div className='field'>
                                 <label htmlFor="password">
                                     Password
                                 </label>
@@ -62,7 +63,7 @@ const Authentication = (props) => {
                                 />
                             </div>
                                                 
-                            <div>
+                            <div className='signinBtn'>
                                 <button                                    
                                     onClick={onLogin}  
                                     disabled={email === '' || password === ''}                                      

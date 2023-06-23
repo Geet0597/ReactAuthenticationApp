@@ -3,3 +3,19 @@
     justify-content: space-between;
     align-items: baseline;
 }
+
+.dataContainer {
+    display: flex;
+    gap: 58px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    width: 300px;
+}
+
+.headerText {
+    font-size: 30px;
+}
