@@ -25,7 +25,7 @@ const Home = (props) => {
   
     useEffect(() => {
       fetchData();
-    }, []);
+    }, [page]);
   
     const fetchData = () => {
       fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=${size}`)
@@ -41,10 +41,7 @@ const Home = (props) => {
     };
   
     const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
-      ) {
+      if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 100) {
         setPage((prevPage) => prevPage + 1);
         setLoading(true);
       }
@@ -79,7 +76,7 @@ const Home = (props) => {
                         <div key={airline._id}>
                           <div>Name: {airline.name}</div>
                           <div>Website: {airline.website}</div>
-                          <div>Logo: <img src={airline.logo} alt='logo'/></div>
+                          <div className='logoContainer'>Logo: <img src={airline.logo} alt='logo' className='logo'/></div>
                           <div>Slogan: {airline.slogan}</div>
                           <div>Head Quaters: {airline.head_quaters}</div>
                           <div>Country: {airline.country}</div>

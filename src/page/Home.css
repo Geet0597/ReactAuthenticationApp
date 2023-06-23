@@ -19,3 +19,13 @@
 .headerText {
     font-size: 30px;
 }
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 251px;
+    height: auto;
+}
