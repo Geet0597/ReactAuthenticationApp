@@ -30,10 +30,25 @@ function App() {
       <div>
         <section>
           <Routes>
-            {!isAuthenticated && <Route path="/" element={<Navigate to="/signin" />} />}
+            <Route
+              path="/"
+              element={
+                isAuthenticated ? (
+                  <Home setIsAuthenticated={setIsAuthenticated} />
+                ) : (
+                  <Navigate to="/signin" />
+                )
+              }
+            />
             <Route
               path="/home"
-              element={isAuthenticated ? <Home setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/signin" />}
+              element={
+                isAuthenticated ? (
+                  <Home setIsAuthenticated={setIsAuthenticated} />
+                ) : (
+                  <Navigate to="/signin" />
+                )
+              }
             />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin setIsAuthenticated={setIsAuthenticated} />} />
