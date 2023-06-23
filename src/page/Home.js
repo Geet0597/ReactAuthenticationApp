@@ -59,37 +59,37 @@ const Home = (props) => {
    
     return(
         <>
-            <nav className='nav'>
-                <p>
-                    Welcome Home
-                </p>
-                <div>
-        			<button onClick={handleLogout}>
-                        Logout
-                    </button>
-        		</div>
-            </nav>
-                <div>
-                    {data.map((item) => (
-                        <div key={item._id}>
-                            Name: {item.name}
-                            No. of Trips: {item.trips}
-                            Airline Details
-                            {item.airline.map((airline) => (
-                                <div key={airline._id}>
-                                    Name: {airline.name}
-                                    Website: {airline.website}
-                                    Logo: <img src={airline.logo} alt='logo'/>
-                                    Slogan: {airline.slogan}
-                                    Head Quaters: {airline.head_quaters}
-                                    country: {airline.country}
-                                    established: {airline.established}
-                            </div>
-                            ))}
-                        </div>
-                    ))}
-                    {loading && <p>Loading...</p>}
-                </div>
+          <nav className='nav'>
+              <p>
+                Welcome Home
+              </p>
+              <div>
+            <button onClick={handleLogout}>
+              Logout
+            </button>
+          </div>
+          </nav>
+          <div>
+              {data.map((item) => (
+                  <div key={item._id}>
+                      Name: {item.name}
+                      No. of Trips: {item.trips}
+                      Airline Details
+                      {item.airline.map((airline) => (
+                        <div key={airline._id}>
+                          Name: {airline.name}
+                          Website: {airline.website}
+                          Logo: <img src={airline.logo} alt='logo'/>
+                          Slogan: {airline.slogan}
+                          Head Quaters: {airline.head_quaters}
+                          country: {airline.country}
+                          established: {airline.established}
+                      </div>
+                      ))}
+                  </div>
+              ))}
+              {loading && <p>Loading...</p>}
+          </div>
         </>
     )
 }

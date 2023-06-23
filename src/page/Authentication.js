@@ -15,6 +15,7 @@ const Authentication = (props) => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user; // to get user details if reuired
+            localStorage.setItem('isAuthenticated', true);
             setIsAuthenticated(true);
             navigate("/home");
         })
