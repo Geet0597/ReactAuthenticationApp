@@ -4,5 +4,7 @@ node_modules/
 # Ignore build artifacts
 build/
 
+public/main.js
+
 # Ignore package lock files
 package-lock.json
