@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../../firebase';
 import {  sendPasswordResetEmail  } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import './ResetPassword.css';
 
 const ResetPassword = () => {
     const navigate = useNavigate();
@@ -19,16 +20,16 @@ const ResetPassword = () => {
     };
   
     return (
-      <div>
+      <div className='container'>
         <h2>Reset Password</h2>
-        <form onSubmit={handleResetPassword}>
+        <form onSubmit={handleResetPassword} className='innerContainer'>
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit">Reset Password</button>
+          <button type="submit" disabled={email === ''}>Reset Password</button>
         </form>
       </div>
     );
